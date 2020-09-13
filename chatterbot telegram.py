@@ -11,8 +11,10 @@ trainer = ListTrainer(bot)
 f = open("treinamento.txt", "r").readlines()
 trainer.train(f)
 
-api = "849728212:AAFKoDrJL2ck2T_wjQOJyo2e46r2UZlzHzs"
+## API KEY ADD HERE
+api = "API_KEY"
 
+# Function to search the text received, the return message below
 def receber(msg):
     texto = (msg['text'])
     _id = msg['from']['id']
@@ -32,8 +34,6 @@ def receber(msg):
 tele = telepot.Bot(api)
 tele.message_loop(receber)
 
+# Set the while to true so that the bot is not interrupted
 while True:
     pass
-
-#install dependencies: telepot
-#install dependencies: chatterbot
